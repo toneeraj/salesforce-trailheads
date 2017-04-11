@@ -1,0 +1,19 @@
+//https://trailhead.salesforce.com/trails/force_com_dev_beginner/modules/apex_triggers/units/apex_triggers_bulk
+trigger ClosedOpportunityTrigger on Opportunity (after insert, after update) {
+
+	List<Task> tasks = new List<Task>();
+
+    for (Opportunity opp : [SELECT Id, StageName FROM Opportunity WHERE Id IN :Trigger.New]) {
+
+        if (opp.StageName == 'Closed Won' ) {
+			Task task = new Task (Subject = 'Follow Up Test Task', WhatId = opp.Id);
+        	tasks.add(task);
+        }
+    }
+
+    //Bulk update
+    if (tasks.size() > 0) {
+    	insert(tasks);
+    }
+
+}
