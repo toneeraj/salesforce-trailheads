@@ -1,0 +1,18 @@
+//https://trailhead.salesforce.com/trails/force_com_dev_beginner/modules/apex_triggers/units/apex_triggers_intro
+trigger AccountAddressTrigger on Account (before insert, before update) {
+	List<Account> accList = new List<Account>();
+
+	Map<Id,Account> acctsWithCriteria = new Map<Id, Account>([SELECT Id, Match_Billing_Address__c FROM Account WHERE Id IN :Trigger.New]);
+    Account updatedAccount = null;
+    for(Account a : Trigger.New) {
+        if (acctsWithCriteria.size() > 0) {
+            if (a.Match_Billing_Address__c == true) {
+            	String postalCode = a.BillingPostalCode;
+                a.ShippingPostalCode = postalCode;
+                accList.add(a);
+            }
+        }
+    }
+}
+//Notes: The above operation is happening in memorey before insert or update. So, you can't call here DMLs like insert(<items>) etc
+//Notes: Trigger.New is only available in before triggers
