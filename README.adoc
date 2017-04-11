@@ -1,0 +1,4 @@
+= salesforce-trailheads
+Code snippets while working on trailheads.
+
+. https://trailhead.salesforce.com/trails/force_com_dev_beginner/modules/apex_triggers/units/apex_triggers_intro[Get Started with Apex Triggers] - the corresponding trigger is https://github.com/toneeraj/salesforce-trailheads/blob/master/apex-triggers/AccountAddressTrigger.tgr[here]
