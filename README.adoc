@@ -1,6 +1,12 @@
 = salesforce-trailheads
 Code snippets while working on trailheads.
 
+== Apex Triggers
+
 . https://trailhead.salesforce.com/trails/force_com_dev_beginner/modules/apex_triggers/units/apex_triggers_intro[Get Started with Apex Triggers] - the corresponding trigger is https://github.com/toneeraj/salesforce-trailheads/blob/master/apex-triggers/AccountAddressTrigger.tgr[here]
 
 . https://trailhead.salesforce.com/trails/force_com_dev_beginner/modules/apex_triggers/units/apex_triggers_bulk[Bulk Trigger] - - the corresponding trigger is https://github.com/toneeraj/salesforce-trailheads/blob/master/apex-triggers/ClosedOpportunityTrigger.tgr[here]
+
+== Visualforce Pages
+
+. https://trailhead.salesforce.com/trails/force_com_dev_beginner/modules/visualforce_fundamentals/units/visualforce_standard_list_controllers[Use standard list controllers] - the corresponding vfp is [here]
