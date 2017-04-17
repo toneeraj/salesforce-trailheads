@@ -10,3 +10,7 @@ Code snippets while working on trailheads.
 == Visualforce Pages
 
 . https://trailhead.salesforce.com/trails/force_com_dev_beginner/modules/visualforce_fundamentals/units/visualforce_standard_list_controllers[Use standard list controllers] - the corresponding vfp is https://github.com/toneeraj/salesforce-trailheads/blob/master/visualforce-pages/AccountList.vfp[here]
+
+== Lightning Components
+
+https://trailhead.salesforce.com/trails/force_com_dev_intermediate/modules/lex_dev_lc_basics/units/lex_dev_lc_basics_controllers[Handle Actions with Controllers]. the corresponding component and controller is https://github.com/toneeraj/salesforce-trailheads/tree/master/lightning-component-basics/handleActionsWithControllers[here]
